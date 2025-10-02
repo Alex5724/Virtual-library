@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("./fonts/Roboto-Regular.woff2") format('woff2');
+    font-display: swap;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --form-color: rgb(255, 187, 0);
+    --generic-font : Roboto;
+}
+.container{
+    display: grid;
+    grid-template: 1fr / 1fr 3fr;
+    height: 100%;
+    width: 100%;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.container > #form-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--form-color);
+    grid-column: 1 / 2;
+}
+.container > #form-container > h1{
+    font-family: var(--generic-font);
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.container > #form-container > form{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--generic-font);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    height: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.container > #form-container > form > div[id^="form"]{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.container > #form-container > form > div[id^="form-read"] > label,
+.container > #form-container > form > div[id^="form-read"] > input{
+    display: block;
+    align-self: start;
+}
+.container > #form-container > form > div[id^="form"] > input{
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    height: 35px;
+    margin-top: 5px;
+}
+#title:focus,
+#author:focus,
+#pages:focus{
+    border: none !important;
+    outline: 2px solid var(--form-color);
+}
+#form-pages > input::-webkit-inner-spin-button,
+#form-pages > input::-webkit-outer-spin-button{
+    display: none;
+}
+#read-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #4CAF50; /* Verde elegant */
+  cursor: pointer;
+}
+.library{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(auto-fit, minmax(200px, 300px));
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    gap: 25px 25px;
+    padding: 80px;
+}
+.library > #book{
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    height: 200px;
+    border-left: 10px solid var(--form-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-family: var(--generic-font);
+}
+#book > #book-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+#book-head > #delete{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(255, 187, 0, 0.4);
+    cursor: pointer;
+ }
+#book-head > #delete:hover{
+    background-color: rgba(255, 187, 0, 0.6);
+ }
+ #book-head > #delete:active{
+    background-color: rgba(255, 187, 0, 0.8);
+ }
+ img{
+    width: 20px;
+    height: 20px;
+ }
+#book-body{
+    width: 80%;
+}
+form > button{
+    border: 2px solid var(--form-color);
+    color: var(--form-color);
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: clamp(12px, 1px + 1vw, 20px);
+    height: 35px;
+    width: 90%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+form > button:hover{
+    background-color: var(--form-color);
+    color: white;
+}
+form > button:active{
+    background-color: rgb(255, 210, 70);
+    border: 2px solid rgb(255, 210, 70);
+}
+.book-info .title{
+    color: var(--form-color);
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
