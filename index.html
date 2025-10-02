@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" type="font/woff2" as="font" href="./fonts/Roboto-Regular.woff2" crossorigin="anonymous">
+    <title>Virtual library</title>
+</head>
+<body>
+    <div class="container">
+        <div id="form-container">
+            <h1>📚 My library</h1>
+            <form action="#" method="post">
+                <div id="form-tile">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+
+                <div id="form-author">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author">
+                </div>
+
+                <div id="form-pages">
+                    <label for="pages">Pages</label>
+                    <input type="number" name="pages" id="pages">
+                </div>
+
+                <div id="form-read">   
+                    <label for="read">Read</label>
+                    <input type="checkbox" name="read-checkbox" id="read-checkbox">
+                </div>
+                <button type="button" id="addbook">+ Add new book</button>
+            </form>
+        </div>
+
+        <div class="library">
+            <div id="book">
+               <div id="book-head">
+                    <div class="book-info">
+                        <span class="title">Corpul</span><br>
+                        <span>by <span class="author">Alex</span></span>
+                    </div>
+                    <button id="delete">
+                        <img src="./icons/trash-can-outline.svg" alt="trashcan icon">
+                    </button>
+                </div>
+                <div id="book-body">📖 <span class="number-pages"></span> pages <br><span class="read">read</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
