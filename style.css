@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     padding: 20px;
     width: 80%;
-    height: 50%;
+    height: 400px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 .container > #form-container > form > div[id^="form"]{
@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
     gap: 25px 25px;
     padding: 80px;
 }
-.library > #book{
+.library > .book{
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     height: 200px;
@@ -105,13 +105,13 @@ body::-webkit-scrollbar {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     font-family: var(--generic-font);
 }
-#book > #book-head{
+.book > #book-head{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
 }
-#book-head > #delete{
+#book-head > .delete{
     width: 40px;
     height: 40px;
     border: none;
@@ -119,10 +119,10 @@ body::-webkit-scrollbar {
     background-color: rgba(255, 187, 0, 0.4);
     cursor: pointer;
  }
-#book-head > #delete:hover{
+#book-head > .delete:hover{
     background-color: rgba(255, 187, 0, 0.6);
  }
- #book-head > #delete:active{
+ #book-head > .delete:active{
     background-color: rgba(255, 187, 0, 0.8);
  }
  img{
